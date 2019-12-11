@@ -1,9 +1,10 @@
-#Hunt The Wumpus v1.03
+#Hunt The Wumpus v1.04
 #goal is to find and shoot the wumpus without going in same room as it.
-#This release adds super bats that teleport the player randomly
+#This release is a testing release for an idea to display maps during the game.
 
 import random
 import time
+import os
 
 def rules():
     #Prompt player if they would like to view rules
@@ -34,9 +35,6 @@ def playagain():
     elif replay == "N" or replay == "n":
         print("OK. Exiting now.")
         time.sleep(1)
-        #tell quit function to pass and end program
-        stop = 1
-        quit(stop)
     else: 
         print("Invalid input.")
         playagain()
@@ -1720,10 +1718,5 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
             playerLocation = "0"
             break
                    
-        
-    
-def quit(stop):
-    if stop == 1:
-        pass
 
 main()
