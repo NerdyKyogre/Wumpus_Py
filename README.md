@@ -7,4 +7,4 @@ A CLI based python port of Hunt The Wumpus. Player uses commands to move and sho
 
 Basically what it says on the tin. Works in Python 3.x out of the box, as it only uses preinstalled modules.
 
-You can download Hunt The Wumpus with IPFS. Get IPFS at https://ipfs.io/#install
+You can download Hunt The Wumpus with IPFS. Get IPFS at https://ipfs.io/#install or using cnapd, homebrew, or chocolatey.
