@@ -4,15 +4,17 @@
 
 import random
 import time
-import os
 
 def rules():
     #Prompt player if they would like to view rules
     rules = input("Welcome to Hunt The Wumpus! Would you like to view the rules? Y/N: ")
     #view rules
     if rules == "Y" or rules == "y":
-        print("You are a spelaeologist who has found the cave said to contain an ancient beast called a Wumpus. You job is to catch and shoot it in order to analyze it.\nYou can move within the cave, which is a 4 by 4 grid of identical rooms, with the command 'm' or 'move', and shoot with 's' or 'shoot'.\nYou must shoot into the next room if you think the wumpus is there. But beware, if you shoot and miss the wumpus may come out and eat you! You will be told when you smell a wumpus in a nearby room. If you enter the room with the wumpus, it will eat you and kill you.\nTwo rooms in the cave have bottomless pits. You will be told if you feel a draft coming from a pit.\nTwo rooms in the cave contain bats that teleport you to a random room. They may teleport you into a bottomless pit, or even in with the Wumpus. You will be told when you hear bats nearby.\nThere may be cases where more than one of these hazards can occur in the same room. \nGood luck and have fun!")
-        time.sleep(1)
+        #print the map
+        with open("map1r0.txt", "r") as map:
+            print(map.read()) 
+        print("The game begins in one minute.\nYou are a spelaeologist who has found the cave said to contain an ancient beast called a Wumpus. You job is to catch and shoot it in order to analyze it.\nYou can move within the cave, which is a 4 by 4 grid of identical rooms as displayed above, with the command 'm' or 'move', and shoot with 's' or 'shoot'.\nYou must shoot into the next room if you think the wumpus is there. But beware, if you shoot and miss the wumpus may come out and eat you! You will be told when you smell a wumpus in a nearby room. If you enter the room with the wumpus, it will eat you and kill you.\nTwo rooms in the cave have bottomless pits. You will be told if you feel a draft coming from a pit.\nTwo rooms in the cave contain bats that teleport you to a random room. They may teleport you into a bottomless pit, or even in with the Wumpus. You will be told when you hear bats nearby.\nThere may be cases where more than one of these hazards can occur in the same room. \nGood luck and have fun!")       
+        time.sleep(20)
     #prompt again if input is not Y or N
     elif rules != "N" and rules != "n":
         print("Invalid input.")
@@ -100,6 +102,9 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
         #Set possibilities for each room the player can be in.
         #For sake of simplicity, only room 1 has comments that apply to all the rooms.
         if playerLocation == "1":
+            #print the map
+            with open("map1r1.txt", "r") as map:
+                print(map.read())
             #tell user what room they're in
             print("You are in room 1. You can move to room 2 or 5.")
             #Tell user if wumpus is in room within shooting range, if bats are around, and if pit is in neighbouring cave.
@@ -213,6 +218,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
        
             
         if playerLocation == "2":
+            with open("map1r2.txt", "r") as map:
+                print(map.read())            
             print("You are in room 2. You can move to room 1, 3, or 6.")
             if pit1 == "1" or pit2 == "1" or pit1 == "3" or pit2 == "3" or pit1 == "6" or pit2 == "6":
                 time.sleep(0.5)
@@ -315,6 +322,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
 
             
         if playerLocation == "3":
+            with open("map1r3.txt", "r") as map:
+                print(map.read())             
             print("You are in room 3. You can move to room 2, 4, or 7.")
             if pit1 == "2" or pit2 == "2" or pit1 == "4" or pit2 == "4" or pit1 == "7" or pit2 == "7":
                 time.sleep(0.5)
@@ -416,6 +425,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
 
             
         if playerLocation == "4":
+            with open("map1r4.txt", "r") as map:
+                print(map.read()) 
             print("You are in room 4. You can move to room 3 or 8.")
             if pit1 == "8" or pit2 == "8" or pit1 == "3" or pit2 == "3":
                 time.sleep(0.5)
@@ -507,6 +518,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
                     
             
         if playerLocation == "5":
+            with open("map1r5.txt", "r") as map:
+                print(map.read())             
             print("You are in room 5. You can move to room 1 or 6.")
             if pit1 == "1" or pit2 == "1" or pit1 == "6" or pit2 == "6":
                 time.sleep(0.5)
@@ -603,6 +616,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
             
     
         if playerLocation == "6":
+            with open("map1r6.txt", "r") as map:
+                print(map.read())             
             print("You are in room 6. You can move to room 2, 5, 7, or 10.")
             if pit1 == "2" or pit2 == "2" or pit1 == "5" or pit2 == "5" or pit1 == "7" or pit2 == "7" or pit1 == "10" or pit2 == "10":
                 time.sleep(0.5)
@@ -710,6 +725,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
                    
     
         if playerLocation == "7":
+            with open("map1r7.txt", "r") as map:
+                print(map.read())             
             print("You are in room 7. You can move to room 3, 6, 8, or 11.")
             if pit1 == "3" or pit2 == "3" or pit1 == "6" or pit2 == "6" or pit1 == "8" or pit2 == "8" or pit1 == "11" or pit2 == "11":
                 time.sleep(0.5)
@@ -817,6 +834,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
                       
             
         if playerLocation == "8":
+            with open("map1r8.txt", "r") as map:
+                print(map.read())             
             print("You are in room 8. You can move to room 4, 7, or 12.")
             if pit1 == "4" or pit2 == "4" or pit1 == "12" or pit2 == "12" or pit1 == "7" or pit2 == "7":
                 time.sleep(0.5)
@@ -918,6 +937,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
                     
         
         if playerLocation == "9":
+            with open("map1r9.txt", "r") as map:
+                print(map.read())             
             print("You are in room 9. You can move to room 5, 10, or 13.")
             if pit1 == "5" or pit2 == "5" or pit1 == "10" or pit2 == "10" or pit1 == "13" or pit2 == "13":
                 time.sleep(0.5)
@@ -1019,6 +1040,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
            
             
         if playerLocation == "10":
+            with open("map1r10.txt", "r") as map:
+                print(map.read())             
             print("You are in room 10. You can move to room 6, 9, 11, or 14.")
             if pit1 == "6" or pit2 == "6" or pit1 == "9" or pit2 == "9" or pit1 == "11" or pit2 == "11" or pit1 == "14" or pit2 == "14":
                 time.sleep(0.5)
@@ -1126,6 +1149,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
            
     
         if playerLocation == "11":
+            with open("map1r11.txt", "r") as map:
+                print(map.read())             
             print("You are in room 11. You can move to room 7, 10, 12, or 15.")
             if pit1 == "7" or pit2 == "7" or pit1 == "10" or pit2 == "10" or pit1 == "12" or pit2 == "12" or pit1 == "15" or pit2 == "15":
                 time.sleep(0.5)
@@ -1233,6 +1258,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
                       
             
         if playerLocation == "12":
+            with open("map1r12.txt", "r") as map:
+                print(map.read())             
             print("You are in room 12. You can move to room 8, 11, or 16.")
             if pit1 == "8" or pit2 == "8" or pit1 == "11" or pit2 == "11" or pit1 == "16" or pit2 == "16":
                 time.sleep(0.5)
@@ -1334,6 +1361,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
             
             
         if playerLocation == "13":
+            with open("map1r13.txt", "r") as map:
+                print(map.read())             
             print("You are in room 13. You can move to room 9 or 14.")
             if pit1 == "9" or pit2 == "9" or pit1 == "14" or pit2 == "14":
                 time.sleep(0.5)
@@ -1428,6 +1457,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
             break
      
         if playerLocation == "14":
+            with open("map1r14.txt", "r") as map:
+                print(map.read())             
             print("You are in room 14. You can move to room 10, 13, or 15.")
             if pit1 == "15" or pit2 == "15" or pit1 == "13" or pit2 == "13" or pit1 == "10" or pit2 == "10":
                 time.sleep(0.5)
@@ -1525,6 +1556,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
                     
             
         if playerLocation == "15":
+            with open("map1r15.txt", "r") as map:
+                print(map.read())             
             print("You are in room 15. You can move to room 11, 14, or 16.")
             if pit1 == "11" or pit2 == "11" or pit1 == "14" or pit2 == "14" or pit1 == "16" or pit2 == "16":
                 time.sleep(0.5)
@@ -1625,6 +1658,8 @@ def wumpus(wumpusRoom,playerLocation,pit1,pit2,bat1,bat2,crash):
                       
         
         if playerLocation == "16":
+            with open("map1r16.txt", "r") as map:
+                print(map.read())             
             print("You are in room 16. You can move to room 12 or 15.")
             if pit1 == "12" or pit2 == "12" or pit1 == "15" or pit2 == "15":
                 time.sleep(0.5)
