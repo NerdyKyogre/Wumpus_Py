@@ -4,6 +4,7 @@
 
 import random
 import time
+import sys
 
 def rules():
     #Prompt player if they would like to view rules
@@ -43,6 +44,8 @@ def main():
     rules()
     #ask player which map they want to play
     mapinput = "Null"
+    if sys.argv[1] == "-m" or sys.argv[1] == "--map":
+        mapinput = sys.argv[2]
     while mapinput == "Null":
         mapinput=input("Will you choose map 1 or 2? ")
         if mapinput != "1" and mapinput != "2":
