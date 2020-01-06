@@ -46,6 +46,7 @@ def main():
     mapinput = "Null"
     if sys.argv[1] == "-m" or sys.argv[1] == "--map":
         mapinput = sys.argv[2]
+        mapchoice = int(mapinput)
     while mapinput == "Null":
         mapinput=input("Will you choose map 1 or 2? ")
         if mapinput != "1" and mapinput != "2":
