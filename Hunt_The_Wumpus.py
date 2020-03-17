@@ -53,6 +53,7 @@ def main():
             mapchoice = int(mapinput)
     except IndexError:
         mapinput = "Null"
+
     while mapinput == "Null":
         mapinput=input("Will you choose map 1 or 2? ")
         if mapinput != "1" and mapinput != "2":

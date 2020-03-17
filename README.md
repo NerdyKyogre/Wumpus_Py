@@ -10,3 +10,4 @@ Basically what it says on the tin. Works in Python 3.x out of the box, as it onl
 In releases with an ASCII map, smaller terminal font sizes work better. On a 720p screen, 12pt is reccommended. On 1080p, 14pt. On 4K, 18pt.
 
 You can download Hunt The Wumpus with IPFS. Get IPFS at https://ipfs.io/#install or using snapd, homebrew, or chocolatey
+
