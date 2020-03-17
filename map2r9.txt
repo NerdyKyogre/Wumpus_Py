@@ -1,0 +1,32 @@
+         ----                                ----
+        | 02 | OOOOOOOOOOOOOOOOOOOOOOOOOOOO | 10 |
+        O----                                ----O
+       O    O                                 O   O
+      O      O                               O     O
+     O         ----        ----        ----         O
+     O        | 03 | OOOO | 12 | OOOO |YOU |        O
+    O          ----        ----        ----          O
+    O        O               O               O       O
+   O        O                O                O       O
+   O       O               ----                O      O
+   O     ----         O O | 13 | O O         ----     O
+   O    | 04 |     ----    ----    ----     | 19 |    O
+   O     ----  OO | 14 |          | 18 | OO  ----     O
+   O      O        ----            ----        O      O
+   O      O           O            O           O      O
+   O    ----          ----       ----         ----    O
+   O   | 05 |        | 15 | OOO | 16 |       | 20 |   O
+   O    ----          ----       ----         ----    O
+   O    O    O        O             O        O    O   O
+  ---- O      O ---- O               O ---- O      O ----
+ | 01 |        | 06 |                 | 17 |        | 11 |
+  ----          ----                   ----          ----
+     O               O                O                O
+      O                O            O                 O
+       OO                O  ----  O                  O
+         OO                | 07 |                 OO
+           OO               ----               OO
+              OO             O              OO
+                 OO         ----         OO
+                    OOOOOO | 08 | OOOOOO
+                            ----
